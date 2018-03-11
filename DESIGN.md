@@ -1,5 +1,13 @@
 # Application Design
 
+## App design overview 
+
+The application consists of two main components : 
+
+A data entry screen where the user enters information about their specific application change/release. 
+
+A back end API that interacts with a Machine Learning based AI solution that is using supervised learning. 
+
 NPM modules 
 -----------
 

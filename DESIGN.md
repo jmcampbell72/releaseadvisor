@@ -1,4 +1,4 @@
-# Application Desig 
+# Application Design
 
 NPM modules 
 -----------
@@ -10,11 +10,11 @@ NPM modules
 
 ## Project structure 
 
-| README.md
-| DESIGN.md
-| package.json
-| index.js
-|--- config
+* README.md
+* DESIGN.md
+* package.json
+* index.js
+**** config
 |----- server.js 
 |----- logger.js
 |--- scripts
@@ -28,3 +28,4 @@ NPM modules
 |----- img
 |----- js
 |--- test (test scripts)
+|

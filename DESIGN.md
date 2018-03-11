@@ -14,8 +14,7 @@ NPM modules
 * DESIGN.md
 * package.json
 * index.js
-
-|--- config
+  * config
 |
 |----- server.js 
 |

@@ -15,10 +15,8 @@ NPM modules
 * package.json
 * index.js
   * config
-|
-|----- server.js 
-|
-|----- logger.js
+    * server.js 
+    * logger.js
 |
 |--- scripts
 |----- build scripts

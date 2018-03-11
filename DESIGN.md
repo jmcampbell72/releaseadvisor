@@ -15,10 +15,12 @@ NPM modules
 * package.json
 * index.js
 
-**** config
-
+|--- config
+|
 |----- server.js 
+|
 |----- logger.js
+|
 |--- scripts
 |----- build scripts
 |----- npm scripts

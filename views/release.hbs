@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 
+        <title>Release Advisor</title>
+    </head>
+    <body>
+
+      {{> basenav }}
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- column 1 -->
+          <div class="col-sm">
+           <div class="card">
+             <div class="card-header">Release Details</div>
+              <div class="card-body">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Release Name</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Release Name" aria-label="Release Name" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                      <div class="input-group-append">
+                      <label class="input-group-text" for="inputGroupSelect02">Release Team</label>
+                  </div>
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Choose...</option>
+                      <option value="1">{{rteama}}</option>
+                      <option value="2">{{rteamb}}</option>
+                      <option value="3">{{rteamc}}</option>
+                      <option value="4">{{rteamd}}</option>
+                      <option value="5">{{rteame}}</option>
+                      <option value="5">{{rteamf}}</option>
+                    </select>
+                  </div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Release Overview</span>
+                  </div>
+                  <textarea class="form-control" aria-label="Release Overview"></textarea>
+                </div>
+              </div>
+          </div>
+          <div class="card">
+            <div class="card-header">Technical Attributes</div>
+              <div class="card-body">
+                <h6 class="card-title">Business Information</h6>
+                  <div class="input-group mb-3">
+                      <div class="input-group-append">
+                      <label class="input-group-text" for="inputGroupSelect02">Business Unit</label>
+                  </div>
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Choose...</option>
+                      <option value="1">{{biza}}</option>
+                      <option value="2">{{bizb}}</option>
+                      <option value="3">{{bizc}}</option>
+                      <option value="4">{{bizd}}</option>
+                      <option value="5">{{bize}}</option>
+                      <option value="5">{{bizf}}</option>
+                    </select>
+                  </div>
+                      <div class="input-group mb-3">
+                          <div class="input-group-append">
+                          <label class="input-group-text" for="inputGroupSelect02">Change Priority</label>
+                      </div>
+                        <select class="custom-select" id="inputGroupSelect02">
+                          <option selected>Choose...</option>
+                          <option value="1">High</option>
+                          <option value="2">Medium</option>
+                          <option value="3">Low</option>
+                        </select>
+                      </div>
+                      <div class="input-group mb-3">
+                          <div class="input-group-append">
+                          <label class="input-group-text" for="inputGroupSelect02">Change Scope</label>
+                      </div>
+                        <select class="custom-select" id="inputGroupSelect02">
+                          <option selected>Choose...</option>
+                          <option value="1">Global</option>
+                          <option value="2">Europe</option>
+                          <option value="3">U.S.A</option>
+                          <option value="2">Asia Pacific</option>
+                          <option value="3">UK</option>
+                        </select>
+                      </div>
+                      <h6 class="card-title">Application Information</h6>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Application Name</span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Application Name" aria-label="Application Name" aria-describedby="basic-addon1">
+                        </div>
+                         <div class="input-group mb-3">
+                          <div class="input-group-append">
+                          <label class="input-group-text" for="inputGroupSelect02">Change Type</label>
+                          </div>
+                            <select class="custom-select" id="inputGroupSelect02">
+                              <option selected>Choose...</option>
+                              <option value="1">Front End - Web</option>
+                              <option value="2">Front End - Virtual Desktop</option>
+                              <option value="3">Back End - Application</option>
+                              <option value="4">Back End - Database </option>
+                            </select>
+                        </div>
+                         <h6 class="card-title">Infrastructure Information</h6>
+                           <div class="input-group mb-3">
+                          <div class="input-group-append">
+                          <label class="input-group-text" for="inputGroupSelect02">Infrastructure Platform</label>
+                          </div>
+                            <select class="custom-select" id="inputGroupSelect02">
+                              <option selected>Choose...</option>
+                              <option value="1">VHS</option>
+                              <option value="2">Physical x86</option>
+                              <option value="3">PaaS</option>
+                              <option value="4">AIX </option>
+                              <option value="4">Solaris </option>
+                            </select>
+                        </div>
+              </div>
+          </div>
+          <br>
+          <div class="card">
+              <div class="card-body">
+                <a href="/askrelease" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Ask Release Advisor</a>
+                <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Cancel</a>
+              </div>
+          </div>
+      </div>
+        <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+
+        </div>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+
+</html>

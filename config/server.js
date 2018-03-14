@@ -6,6 +6,7 @@ var calc = require('../components/calc.js');
 
 // load required npm modules
 var express = require('express');
+var bodyParser = require('body-parser');
 var hbs = require('hbs');
 var app = express();
 
@@ -30,7 +31,8 @@ var businessunits = {
   "bizb": "Asset Management",
   "bizc": "Group I.T",
   "bizd": "Private Wealth Management",
-  "bize": "Retail Bank"
+  "bize": "Retail Bank",
+  "bizf": "Global"
 }
 
 var counters = {
@@ -98,9 +100,30 @@ app.get('/about', (req, res) => {
   res.send('about called');
 });
 
-app.get('/askrelease', (req, res) => {
-  res.send('api called');
-});
+app.use(bodyParser.json());
+
+app.post('/askrelease', (req, res) => {
+  
+
+  var businessUnit = parseInt(req.body.businessunit);
+  var changePriority = parseInt(req.body.changepriority);
+  var changeScope = parseInt(req.body.changescope);
+  var changeType = parseInt(req.body.changetype);
+  var infrPlatform = parseInt(req.body.infrplatform);
+  var appName = req.body.appname;
+  
+  var releaseCalc = (businessUnit + changePriority + changeType + infrPlatform) * changeScope;
+  
+  console.log(req.body);
+
+  res.send({releaseCalc});  
+  res.status(200);
+  console.log(releaseCalc);
+ 
+})
+// app.get('/askrelease', (req, res) => {
+//   res.send('api called');
+// });
 // setup server
 var server = app.listen(8081, function() {
     var host = server.address().address

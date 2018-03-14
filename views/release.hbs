@@ -31,14 +31,14 @@
                       <div class="input-group-append">
                       <label class="input-group-text" for="inputGroupSelect02">Release Team</label>
                   </div>
-                    <select class="custom-select" id="inputGroupSelect02">
+                    <select class="custom-select" id="inputReleaseTeam">
                       <option selected>Choose...</option>
-                      <option value="1">{{rteama}}</option>
-                      <option value="2">{{rteamb}}</option>
-                      <option value="3">{{rteamc}}</option>
-                      <option value="4">{{rteamd}}</option>
-                      <option value="5">{{rteame}}</option>
-                      <option value="5">{{rteamf}}</option>
+                      <option value={{rteama}}>{{rteama}}</option>
+                      <option value={{rteamb}}>{{rteamb}}</option>
+                      <option value={{rteamc}}>{{rteamc}}</option>
+                      <option value={{rteamd}}>{{rteamd}}</option>
+                      <option value={{rteame}}>{{rteame}}</option>
+                      <option value={{rteamf}}>{{rteamf}}</option>
                     </select>
                   </div>
                 <div class="input-group">
@@ -57,38 +57,38 @@
                       <div class="input-group-append">
                       <label class="input-group-text" for="inputGroupSelect02">Business Unit</label>
                   </div>
-                    <select class="custom-select" id="inputGroupSelect02">
-                      <option selected>Choose...</option>
-                      <option value="1">{{biza}}</option>
-                      <option value="2">{{bizb}}</option>
-                      <option value="3">{{bizc}}</option>
-                      <option value="4">{{bizd}}</option>
-                      <option value="5">{{bize}}</option>
-                      <option value="5">{{bizf}}</option>
+                    <select class="custom-select" id="inputBusiness">
+                      <option value="0" selected>Choose...</option>
+                      <option value="9">{{biza}}</option>
+                      <option value="5">{{bizb}}</option>
+                      <option value="6">{{bizc}}</option>
+                      <option value="3">{{bizd}}</option>
+                      <option value="10">{{bize}}</option>
+                      <option value="11">{{bizf}}</option>
                     </select>
                   </div>
                       <div class="input-group mb-3">
                           <div class="input-group-append">
                           <label class="input-group-text" for="inputGroupSelect02">Change Priority</label>
                       </div>
-                        <select class="custom-select" id="inputGroupSelect02">
-                          <option selected>Choose...</option>
-                          <option value="1">High</option>
-                          <option value="2">Medium</option>
-                          <option value="3">Low</option>
+                        <select class="custom-select" id="inputChangePriority">
+                          <option value="0" selected>Choose...</option>
+                          <option value="9">High</option>
+                          <option value="5">Medium</option>
+                          <option value="2">Low</option>
                         </select>
                       </div>
                       <div class="input-group mb-3">
                           <div class="input-group-append">
                           <label class="input-group-text" for="inputGroupSelect02">Change Scope</label>
                       </div>
-                        <select class="custom-select" id="inputGroupSelect02">
-                          <option selected>Choose...</option>
-                          <option value="1">Global</option>
-                          <option value="2">Europe</option>
-                          <option value="3">U.S.A</option>
-                          <option value="2">Asia Pacific</option>
-                          <option value="3">UK</option>
+                        <select class="custom-select" id="inputChangeScope">
+                          <option value="0" selected>Choose...</option>
+                          <option value="9">Global</option>
+                          <option value="7">Europe</option>
+                          <option value="8">U.S.A</option>
+                          <option value="7">Asia Pacific</option>
+                          <option value="8">UK</option>
                         </select>
                       </div>
                       <h6 class="card-title">Application Information</h6>
@@ -96,18 +96,18 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">Application Name</span>
                           </div>
-                          <input type="text" class="form-control" placeholder="Application Name" aria-label="Application Name" aria-describedby="basic-addon1">
+                          <input type="text" class="form-control" placeholder="Application Name" id="inputAppName" aria-label="Application Name" aria-describedby="basic-addon1">
                         </div>
                          <div class="input-group mb-3">
                           <div class="input-group-append">
                           <label class="input-group-text" for="inputGroupSelect02">Change Type</label>
                           </div>
-                            <select class="custom-select" id="inputGroupSelect02">
-                              <option selected>Choose...</option>
-                              <option value="1">Front End - Web</option>
+                            <select class="custom-select" id="inputChangeType">
+                              <option value="0" selected>Choose...</option>
+                              <option value="2">Front End - Web</option>
                               <option value="2">Front End - Virtual Desktop</option>
-                              <option value="3">Back End - Application</option>
-                              <option value="4">Back End - Database </option>
+                              <option value="8">Back End - Application</option>
+                              <option value="10">Back End - Database </option>
                             </select>
                         </div>
                          <h6 class="card-title">Infrastructure Information</h6>
@@ -115,13 +115,13 @@
                           <div class="input-group-append">
                           <label class="input-group-text" for="inputGroupSelect02">Infrastructure Platform</label>
                           </div>
-                            <select class="custom-select" id="inputGroupSelect02">
-                              <option selected>Choose...</option>
-                              <option value="1">VHS</option>
-                              <option value="2">Physical x86</option>
-                              <option value="3">PaaS</option>
-                              <option value="4">AIX </option>
-                              <option value="4">Solaris </option>
+                            <select class="custom-select" id="inputInfrPlatform">
+                              <option value="0" selected>Choose...</option>
+                              <option value="4">VHS</option>
+                              <option value="5">Physical x86</option>
+                              <option value="2">PaaS</option>
+                              <option value="9">AIX </option>
+                              <option value="9">Solaris </option>
                             </select>
                         </div>
               </div>
@@ -129,16 +129,17 @@
           <br>
           <div class="card">
               <div class="card-body">
-                <a href="/askrelease" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Ask Release Advisor</a>
+                <a class="btn btn-primary btn-lg active" role="button" aria-pressed="true" onclick="loadDoc()">Ask Release Advisor</a>
                 <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Cancel</a>
               </div>
           </div>
       </div>
         <div class="col-sm">
             <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="..." alt="Card image cap">
+             
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Release Impact Assessment</p>
+                  <span>Release Score<h5 id="totalCalc"></h5></span>
                 </div>
             </div>
         </div>
@@ -146,11 +147,55 @@
         </div>
       </div>
 
+      <script>
+
+function loadDoc() {
+
+var releaseTeam = document.getElementById("inputReleaseTeam").value;
+var businessUnit = document.getElementById("inputBusiness").value;
+var changePriority = document.getElementById("inputChangePriority").value;
+var changeScope = document.getElementById("inputChangeScope").value;
+var changeType = document.getElementById("inputChangeType").value;
+var infrPlatform = document.getElementById("inputInfrPlatform").value;
+var appName = document.getElementById("inputAppName").value;
+
+
+console.log(releaseTeam);
+var myUrl = "/askrelease";
+
+var params = {  "releasteam": releaseTeam, 
+                "businessunit": businessUnit,
+                "changepriority": changePriority,
+                "changescope": changeScope,
+                "changetype": changeType,
+                "infrplatform": infrPlatform, 
+                "appname": appName
+                };
+
+$.ajax({
+         url: myUrl,
+         type: "POST",
+         data: JSON.stringify(params),
+         dataType: "json",
+         contentType: "application/json",
+         success: function(data)
+         {
+                console.log("Response " + data.releaseCalc);
+                document.getElementById("totalCalc").innerHTML = data.releaseCalc;
+
+         }
+});
+}
+
+</script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     </body>
 
 </html>

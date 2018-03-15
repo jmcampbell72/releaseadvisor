@@ -1,0 +1,75 @@
+Principles 
+
+- constants
+
+junkshon set contstants
+
+geo = { 
+    locale: UK, weight: 1
+    locale: USA, weight: 5
+    locale: London, weight 1
+        
+}
+
+// apps to server ratio
+
+servercomplex = { 
+    high: 10
+    med: 5
+    low: 1
+}
+
+// os attributes 
+
+osclass = {
+    roadmap: [ 'EOSL':worst+worst, '<6 months':worst, '+6 - 24 months':medium, '> 24months':bestcase] 
+    osvendor: [ 'Microsoft','Redhat','Oracle']
+    roadmap_vendor_current : [ 'Windows 2008': 'Windows 2012', RedHat 5 RHEL 7, CentOs: Centos, Suse, Solaris: ? ]
+    roadmap_optmise [ 'Windows 2008' 'Docker on Azure']
+}
+
+// customer env class.
+
+env = {
+    envClass: [ 'Dev': RiskWeighting, 'UaT': risk, 'Prod': risk, ''ProdDR': risk ]
+    
+}
+
+// network connections 
+
+
+serverconnection = { 
+    high: 5
+    med: 3
+    low: 2
+}
+
+osEosl = { 
+    valid: 1
+    invalid: 10 
+}
+
+osRoadmap = { 
+    typical: 12
+    bad: -0
+}
+
+// risk objects, do we have different risk object key value paris for different risk assessments, e.g. os risk vs. app risk
+// risk comparison 
+
+riskOS = {
+    high: value - (EOSL, Unknown, Legacy)
+    medium: 
+    low:
+}
+
+- variables
+
+businessunit = { 
+    bu: IST, buType: Revenue
+    bu: HR, buTYpe: Function 
+} 
+
+
+- super variables 
+
